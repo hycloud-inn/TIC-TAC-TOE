@@ -56,7 +56,7 @@ jobs:
          tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-app:${{github.run_id}}
 
       - name: Run Trivy vulnerability scanner
-      - uses: aquasecurity/trivy-action@0.20.0
+        uses: aquasecurity/trivy-action@0.20.0
         with:
           image-ref: 'docker.io/hycloud16/reactapp:${{ github.sha }}'
           format: 'table'
