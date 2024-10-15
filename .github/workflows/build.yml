@@ -53,7 +53,7 @@ jobs:
          context: .
          file: ./Dockerfile
          push: true
-         tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-app:${{github.run_id}}
+         tags: ${{ secrets.DOCKERHUB_USERNAME }}/reactapp:${{ github.sha }}
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.20.0
